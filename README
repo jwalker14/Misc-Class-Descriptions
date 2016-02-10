@@ -1,0 +1,9 @@
+Please read this carefully. I will be adding more to this as I come up with new stuff.
+
+Although I'm describing the classes in the folder please the RoR docs to see how the setters and getters are actually done. Along with the other methods.
+
+RoR is a MVC framework meaning, you have models (in this case database schemas) and controllers thathold the methods and such. THIS IS IMPORTANT TO NOTE AND I WILL GO OVER IT IN MORE DEPTH
+
+Willie - base you schema off these. In RoR it creates a table for each model (if you want). I'm sure there are other ways but that's how I've used it so far.
+
+- Jason

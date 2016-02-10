@@ -1,0 +1,61 @@
+class AccountHolder extends User
+
+===============
+Notes
+===============
+Class Designed by: Jason Walker
+
+===============
+Methods
+===============
+- constructor
+    - Input: (firstName, LastName, username, email, password, address(array))
+    - Output:
+      - if unsuccessful 0
+      - if successful userId in DB
+    - Description:
+        Set the first, last names and address, check availability for username, encrypt and set password
+
+- addAcount
+  - Input: (account (object))
+  - Output:
+    - if unsuccessful 0
+    - if successful account.number
+  - Description:
+    This method might be uneccessary in RoR, i'm not sure if just creating an account with the userid will be sufficient. Ill leave this to you to figure out.
+
+- removeAccount
+  - Account.closeAcct() (FIRST)
+
+  - Input: (account (object))
+  - Output:
+    - if unsuccessful 0
+    - if successful 1
+  - Description:
+      Opposite of above.
+
+- deconstruct
+  - Input:
+  - Ouput:
+    - if unsuccessful 0
+    - if successful DB(status)
+  - Description:
+    Similar to banks they don't just remove you from the system you are always a user. So well just mark the status as deactive.
+
+===============
+Variables
+===============
+- First Name
+- Last Name
+- Username
+- Encrypted Password
+- Email
+- status (active, deactive)
+- Accounts (has_many)
+- Address (array)
+    - Street 1
+    - Street 2
+    - POBox if applicable
+    - City
+    - State
+    - Zip

@@ -1,0 +1,85 @@
+Class Account
+
+==============
+Notes
+==============
+Class Designed by: Jason Walker
+THIS CLASS CANNOT BE INSTANTIATED
+
+==============
+Methods
+==============
+
+Public Getters
+Public Setters
+  Except for: acctNum, acctHolder, annualInterestRate, status, balance, dateCreated
+
+- deposit
+  - Input: (amount)
+  - Output:
+      - False/0 is unsuccesful
+      - True/1 if successful
+  - Description
+      I dont think this needs much explaining, create a deposit object and store in the database.
+      Update balance on account.
+- withdrawl
+  - Input: (amount)
+  - Output:
+      - False/0 if unsuccesful
+      - True/1 if successful
+  - Description
+      I dont think this needs much explaining, create a withdrawl object and store in the database.
+      Update balance on account.
+- addAcctHolder
+  - Input: (jointAcctHolder (AccountHolder object))
+  - Output:
+      - False/0 if unsuccesful
+      - True/1 if successful
+  - Description
+      add an joint account holder
+- updateBalance
+  - Input: (amount (-/+))
+  - Output: updatedBalance
+  - Description:
+      Update the balance of the account
+- updateAIR (annualInterestRate)
+  - Input: (newAIR)
+  - Output: (updatedAIR)
+  - Description:
+      Update the annualInterestRate of the account.
+- transfer
+  - Input: (fromAcct (object || acctNum), amount)
+  - Output:
+      - if unsuccesful 0
+      - if successful update balance
+  - Description:
+      If the fromAcct balance is < amount
+        return 0
+      If the fromAcct balance is > amount
+        update fromAcct balance create new withdraw (from this account), and deposit (to new account) return this.updatedBalance
+- closeAcct
+  - Input:
+  - Output:
+      if unsuccesful 0
+      if successful 1
+  - Description
+      if the balance is < 0
+        return  0
+      if the balance is > 0
+        require withdrawl
+      else
+        change status to closed
+
+
+==============
+Variables
+==============
+- acctNum
+- acctHolder    -> (has_one)
+- jointAcctHolder    -> (has_many?)
+- deposit -> (has_many)
+- withdrawl -> (has_many)
+- balance
+- annualInterestRate
+- dateCreated
+- status - default to open

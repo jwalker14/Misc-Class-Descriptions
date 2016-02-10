@@ -1,0 +1,39 @@
+class Transaction
+=================
+Notes
+=================
+Class Designed by: Jason Walker
+THIS CLASS CANNOT BE INSTANTIATED
+
+=================
+Methods
+=================
+Public Getters
+Private Setters
+
+
+- void
+  - Input:
+  - Output:
+    - if unsuccessful 0
+    - is successful status
+  - Description:
+      We don't want to remove any transaction from the DB, only mark it void.
+
+- updateAmount
+  - Input: (newAmount)
+  - Output:
+      if unsuccessful 0
+      if successful newAmount
+  - Description:
+      If the amount needs to be change set the amount to the new amount.
+
+=================
+Variables
+=================
+- amount
+- dateCreated
+- description
+- transactionNum (cannot be duplicate num in DB)
+- status (pending, approved, void)
+- account -> has_one

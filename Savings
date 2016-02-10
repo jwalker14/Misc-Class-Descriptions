@@ -1,0 +1,56 @@
+class Savings extends Account
+==============
+Notes
+==============
+Class Designed by: Jason Walker
+
+==============
+Methods
+==============
+
+Public Getters
+Public Setters
+    Except for monthlyWithdrawlLimit & numTimesWithdrewThisMonth
+
+- constructor
+    - Input:
+            acctNum,
+            acctHolder (AccountHolder object),
+            initialBalance (must be > 0),
+            dateCreated,
+            annualInterestRate
+    - Output:
+        - false/0 is unsuccesful
+        - true/1 if successful
+    - Description
+        To create an instance of this class you are required to provide the above details with acctNum being the key for the table. Default monthlyWithdrawlLimit to 6 and numTimesWithdrewThisMonth to 0
+- deconstruct
+    closeAccount()
+- withdraw
+    - Input: (amount)
+    - Output:
+        if unsuccesful 0
+        if successful updatedBalance
+    - Description
+        Call super. The only thing different is updating the monthly withdrawl number
+- updateWithdrawLimit
+    - Input: (newLimit)
+    - Output:
+        if unsuccesful 0
+        if successful updatedLimit
+    - Description:
+        Pretty self explanitory (setMonthlyWithdrawlLimit).
+- updateNumTimesWithdrewThisMonth
+    - Input: ()
+    - Output:
+        if unsuccesful 0
+        if successful updatedNum
+    - Description
+        This is probably an internal method for the deposit override.
+
+===============
+Variables
+===============
+- monthlyWithdrawlLimit default to 6
+- numTimesWithdrewThisMonth default 0 (reset on the first every month)
+    This doesn't really mean anything for our purposes but it might be worthwhile to display some kind of warning when they reach the limit?

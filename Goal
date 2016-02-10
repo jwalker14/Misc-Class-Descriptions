@@ -1,0 +1,46 @@
+class Goal
+
+===============
+Notes
+===============
+Class Designed by: Jason Walker
+
+===============
+Methods
+===============
+Public GETTERS
+Private SETTERS
+  Except for Goal ($), Goal Name
+
+- constructor
+  - Input: (goal, goalName, goalDescripiton, owner (object))
+  - Output:
+    - if unsuccessful 0
+    - if successful goalID
+  - Description:
+      The constructor should take a dollar amount a description, and a user object and create a new goal. Set the user and the other variables. Make sure the relationship is correct please.
+
+- addFundingAcount
+  - Input: (account (object/Num))
+  - Output:
+    - if unsuccessful 0
+    - if successful accountNum
+  - Description:
+      Set a new funding account. Again check the Rails docs to see exactly how this is done (Relationships)
+
+- deconstructor
+  - Input:
+  - Output:
+    - if unsuccessful 0
+    - if successful 1
+  - Description:
+    Completely delete the goal. Cannot be retrieved after this.
+
+===============
+Variables
+===============
+- Goal ($)
+- Goal Name
+- Description
+- Funding Account -> (has_many?)
+- Owner -> (has_one)

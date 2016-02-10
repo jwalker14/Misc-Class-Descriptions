@@ -1,0 +1,36 @@
+class Deposit extends Transaction
+=================
+Notes
+=================
+Class Designed by: Jason Walker
+
+=================
+Methods
+=================
+Public Getters
+Private Setters
+
+- constructor
+  - Input: (amount, description, account (object), type)
+  - Output:
+      if unsuccesful 0
+      if successful transactionNum
+  - Description:
+      Generate or set a unique number for the DB, set the amount description, and account, set the dateCreated to currentDay, and mark as pending, approve after 2 days or so (maybe?)..
+      Set the type of deposit.
+
+- deconstructor
+  void();
+  DO NOT DELETE
+
+
+=================
+Variables
+=================
+- amount
+- dateCreated
+- description
+- transactionNum (cannot be duplicate num in DB)
+- status (pending, approved, void)
+- type (cash, check, transfer)
+- account -> has_one

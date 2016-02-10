@@ -1,0 +1,31 @@
+class Checking extends Account
+==============
+Notes
+==============
+Class Designed by: Jason Walker
+
+==============
+Methods
+==============
+
+Public Getters
+Private Setters
+
+- constructor
+    - Input:
+          acctNum,
+          acctHolder (AccountHolder object),
+          initialBalance,
+          dateCreated,
+          annualInterestRate
+    - Output:
+        - false/0 is unsuccesful
+        - true/1 if successful
+    - Description
+        To create an instance of this class you are required to provide the above details with acctNum being the key for the table. Default monthlyWithdrawlLimit to 6 and numTimesWithdrewThisMonth to 0
+- deconstruct
+    closeAccount()
+
+===============
+Variables
+===============

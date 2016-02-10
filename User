@@ -1,0 +1,41 @@
+class User
+
+===============
+Notes
+===============
+Class Designed by: Jason Walker
+THIS CLASS CANNOT BE INSTANTIATED
+
+===============
+Methods
+===============
+Public Setters
+Public Getters
+  Except for password
+
+- setPassword (SETTER for password)
+  - Input: (oldpassword, newpassword, newpasswordconf)
+  - Output:
+    - If unsuccessful 0
+    - if successful 1
+  - Description:
+      if hash(oldpassword) == DB(passsword) && newpassword == newpasswordconf
+        hash(newpassword) -> DB(user.password)
+      else
+        "Please check your entries. Either your oldpassword doesn't match or your newpasswords do not match."
+
+===============
+Variables
+===============
+- First Name
+- Last Name
+- Username
+- Encrypted Password
+- Email
+- Address (array or its own object)
+    - Street 1
+    - Street 2
+    - POBox if applicable
+    - City
+    - State
+    - Zip
